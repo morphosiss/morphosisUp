@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Cabine Grotesk";
+  src: url("./fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +15,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --breakpoint-smaller: 20rem; /* 320px */
+  --breakpoint-small: 37.4375rem; /* 599px */
+  --breakpoint-ret: 37.5rem; /* 600px */
+  --breakpoint-pot: 56.25rem; /* 900px */
+  --breakpoint-det: 75rem; /* 1200px */
+  --breakpoint-lal: 112.5rem; /* 1800px */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +30,26 @@
   }
 }
 
+h1, h2, h3, h4, h5, h6, span {
+  font-family: "Cabine Grotesk", sans-serif;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  font-family: var(--font-poppins);
+}
+
+.back {
+  background-image: linear-gradient(
+    to left bottom,
+    #ffffff,
+    #3a3b3d18,
+    #f5f5f5,
+    #4f39f71a,
+    #4f39f71a,
+    #fff,
+    #4f39f71a,
+    #4f39f71a,
+    #ffffff
+  );
 }
