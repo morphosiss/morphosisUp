@@ -23,6 +23,19 @@
   --breakpoint-lal: 112.5rem; /* 1800px */
 }
 
+.animate-infinite-scroll {
+  animation: infinite-scroll 10s linear infinite;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -30,13 +43,19 @@
   }
 }
 
-h1, h2, h3, h4, h5, h6, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
   font-family: "Cabine Grotesk", sans-serif;
 }
 
 body {
   background: #fff;
-  font-family: var(--font-poppins);
+  font-family: var(--font-inter);
 }
 
 .back {
@@ -52,4 +71,16 @@ body {
     #4f39f71a,
     #ffffff
   );
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
