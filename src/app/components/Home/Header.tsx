@@ -5,7 +5,7 @@ import Banner from "./HeaderComponents/Banner";
 
 const Header = () => {
   return (
-    <header className="py-4 back h-screen relative">
+    <header className="py-4 back  relative">
       <div className="absolute bottom-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-transparent to-white"></div>
       <Navbar />
       <Banner />
@@ -14,8 +14,9 @@ const Header = () => {
       </section>
       <section className="relative pt-32">
         <div className="max-w-3xl w-full mx-auto text-center">
-          <h2 className="font-bold text-5xl">Quem Somos?</h2>
-
+          <header>
+            <h2 className="font-bold text-5xl">Quem Somos?</h2>
+          </header>
           <div className="grid mt-14  pb-5 grid-cols-2 gap-2">
             <div className="p-5 rounded-xl  bg-white border border-gray-200">
               <header>
@@ -42,7 +43,7 @@ const Header = () => {
                 <h3 className="text-start text-indigo-600 font-semibold text-lg">
                   Somos Metamorfose Tecnológica
                 </h3>
-                <p className="text-[14px] pt-3 text-zinc-800">
+                <p className="font-medium pt-3 text-zinc-800">
                   Surgimos na necessidade de transformar a tecnologia em
                   soluções inovadoras e eficientes para atingir os problemas do
                   dia a dia. Diferenciamo-nos pela nossas características
@@ -80,7 +81,7 @@ const Header = () => {
                 <h3 className="text-start text-indigo-600 font-semibold text-lg">
                   Missão
                 </h3>
-                <p className="text-[14px] pt-3 text-zinc-800">
+                <p className="font-medium pt-3 text-zinc-800">
                   Proporcionar soluções tecnológicas inovadoras, ágeis e
                   elegantes, adaptando-se ás necessidades específicas de cada
                   cliente e oferecendo experiências digitais leves, eficientes e
@@ -114,26 +115,24 @@ const Header = () => {
                   Principais Objectivos
                 </h3>
                 <div className="flex flex-col gap-0 leading-snug">
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Ser referência em desenvolvimento tecnológico adaptativo.
                   </p>
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Expandir o portfólio de soluções, atendendo diferences
                     segmentos.
                   </p>
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Fidelizar clientes através da excelência na experiência do
                     cliente.
                   </p>
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Crescer de forma sustentável, formando parcerias
                     estratégicas.
                   </p>
                 </div>
               </footer>
             </div>
-
-           
 
             <div className="p-5 rounded-xl  bg-white border border-gray-200">
               <header>
@@ -160,19 +159,19 @@ const Header = () => {
                   Nossos Valores
                 </h3>
                 <div className="flex flex-col gap-0 leading-snug">
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Adaptação constante - sempre prontos para evoluir com os
                     desafios.
                   </p>
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Excelência com leveza - buscamos a máxima qualidade sem
                     perder a fluidez e simplicidade.
                   </p>
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Agilidade e Eficiência - soluções rápidas, mas sem
                     comprometer a qualidade do producto.
                   </p>
-                  <p className="text-[14px] pt-3 text-zinc-800">
+                  <p className="font-medium pt-3 text-zinc-800">
                     - Inovação Prática - aplicamos a tecnologia de ponta para
                     resolver problemas reais de forma objectiva.
                   </p>

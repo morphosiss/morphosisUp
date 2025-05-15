@@ -16,37 +16,37 @@ const Navbar = () => {
               fill="currentColor"
             />
           </svg>
-          <span className="text-2xl font-semibold text--600">morphosis Up</span>
+          <span className="text-2xl font-semibold text-indigo-600">morphosis Up</span>
         </Link>
       </div>
       <div className="flex items-center gap-16">
         <Link
           href={"/"}
-          className="text-zinc-800 text-[15px] font-medium transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Start Up
         </Link>
         <Link
           href={"/"}
-          className="text-zinc-800 text-[15px] font-medium transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Projectos
         </Link>
         <Link
           href={"/"}
-          className="text-zinc-800 text-[15px] font-medium transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Serviços
         </Link>
         <Link
           href={"/"}
-          className="text-zinc-800 text-[15px] font-medium transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Team
         </Link>
       </div>
       <div>
-        <button className="flex items-center gap-2 text-[15px] font-medium py-2 px-4 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600">
+        <button className="flex items-center gap-2 font-semibold py-2 px-4 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
