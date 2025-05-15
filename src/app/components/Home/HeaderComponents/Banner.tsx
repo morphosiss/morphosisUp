@@ -47,7 +47,7 @@ const Banner = () => {
                 <path d="M4 14l8 4l8 -4" />
               </svg>
             </button>
-            <button className="flex items-center justify-center border border-transparent cursor-pointer gap-2  font-semibold text-lg py-2 px-4 rounded-lg  text-indigo-500 transition-all hover:border hover:border-indigo-500">
+            <button className="flex items-center justify-center hover:text-indigo-600 border border-transparent cursor-pointer gap-2  font-semibold text-lg py-2 px-4 rounded-lg  text-indigo-500 transition-all hover:border hover:border-indigo-500">
               Fale connosco
               <svg
                 xmlns="http://www.w3.org/2000/svg"
