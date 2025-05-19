@@ -3,17 +3,20 @@
 import React, { useEffect, useState } from "react";
 import ProfileCard from "./ProfileCard";
 import CardData from "./CardData";
+import Link from "next/link";
 
 interface ServiceComponent {
   aplication: string;
   tittle: string;
   description: string;
+  link: string;
 }
 
 const ServiceComponent: React.FC<ServiceComponent> = ({
   aplication,
   tittle,
   description,
+  link,
 }) => {
   return (
     <div className="bg-white shadow-lg flex flex-col justify-between p-5 rounded-xl">
@@ -28,7 +31,11 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
         </div>
       </header>
       <footer className="pt-5">
-        <button className="flex transition-all hover:bg-indigo-700 cursor-pointer items-center justify-between w-full mt-5 bg-indigo-600 text-white font-semibold py-2.5 px-3 rounded-lg">
+        <Link
+          href={link}
+          target="_blank"
+          className="flex transition-all hover:bg-indigo-700 cursor-pointer items-center justify-between w-full mt-5 bg-indigo-600 text-white font-semibold py-2.5 px-3 rounded-lg"
+        >
           Solicitar
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +52,7 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
             <path d="M15 16l4 -4" />
             <path d="M15 8l4 4" />
           </svg>
-        </button>
+        </Link>
       </footer>
     </div>
   );
@@ -91,23 +98,27 @@ const Services = () => {
             aplication="Web / Mobile / Desktop"
             tittle="Protótipo de Aplicações"
             description="Criamos protótipos de aplicações para validar ideias e funcionalidades antes do desenvolvimento completo, Garantindo que o produto final atenda às expectativas."
+            link="https://wa.me/244954018728?text=Olá!%20Tenho%20interesse%20em%20Protótipo%20de%20Aplicações.%20Gostaria%20de%20saber%20mais%20detalhes."
           />
           <ServiceComponent
             aplication="Web"
             tittle="Aplicações Web"
             description="Desenvolvemos aplicações web personalizadas, escaláveis e responsivas, utilizando as tecnologias mais recentes para atender às suas necessidades específicas."
+            link="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20em%20Aplicações%20Web.%20Gostaria%20de%20saber%20mais%20detalhes."
           />
 
           <ServiceComponent
             aplication="Web / Mobile / Desktop"
             tittle="Software de Gestão"
             description="Criamos software de gestão personalizados e com Inteligência Artificial para otimizar processos empresariais, aumentar a eficiência e melhorar a tomada de decisões."
+            link="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20em%20Software%20de%20Gestão.%20Gostaria%20de%20saber%20mais%20detalhes."
           />
 
           <ServiceComponent
             aplication="Mobile"
             tittle="Aplicativos Móveis"
             description="Desenvolvemos aplicativos móveis nativos e híbridos para Android e iOS, com foco na experiência do usuário e desempenho."
+            link="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20em%20Aplicativos%20Móveis.%20Gostaria%20de%20saber%20mais%20detalhes."
           />
         </div>
       </div>
