@@ -23,6 +23,10 @@
   --breakpoint-lal: 112.5rem; /* 1800px */
 }
 
+button {
+  outline: none;
+}
+
 .animate-infinite-scroll {
   animation: infinite-scroll 10s linear infinite;
 }

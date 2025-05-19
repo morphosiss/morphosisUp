@@ -75,7 +75,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="pb-32 relative back mt-28">
+    <section id="services" className="pb-32 relative back mt-28">
       <div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></div>
       <div className="pt-28 relative">
         <header className="text-center px-5 max-w-xl w-full mx-auto ">
@@ -112,7 +112,7 @@ const Services = () => {
         </div>
       </div>
 
-      <section className="mt-48 px-5">
+      <section id="team" className="mt-48 px-5">
         <header className="text-center max-w-xl w-full mx-auto ">
           <h2 className="font-bold text-4xl">Team</h2>
           <h5 className="pt-2 font-medium text-[18px] text-zinc-800">

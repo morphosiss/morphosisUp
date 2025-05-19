@@ -12,7 +12,7 @@ const Header = () => {
       <section className="z-20 relative w-full left-0 right-0 flex items-start mt-14 gap-10">
         <InfiniteScroll cardData={data} />
       </section>
-      <section className="relative pt-32">
+      <section id="banner" className="relative pt-32">
         <div className="max-w-3xl w-full mx-auto text-center">
           <header>
             <h2 className="font-bold pot:text-5xl ret:text-4xl text-3xl">

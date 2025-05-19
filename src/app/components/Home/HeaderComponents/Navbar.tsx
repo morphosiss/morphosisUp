@@ -25,11 +25,20 @@ const Navbar = () => {
     };
   }, []);
 
+  const scrollToElement = (elementId: string, offset: number) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const yOffset = offset;
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       className={`flex transition-all ${
-        scrollY && "bg-[rgba(103,105,206,0.08)] z-50 backdrop-blur-2xl"
-      } py-4 fixed top-0 left-0 right-0 items-center justify-between pot:px-0 px-5 pot:justify-around w-full`}
+        scrollY && "bg-[rgba(103,105,206,0.08)]  backdrop-blur-2xl"
+      } py-4 fixed top-0 left-0 right-0 items-center z-50 justify-between pot:px-0 px-5 pot:justify-around w-full`}
     >
       <div>
         <Link href={"/"} className="flex items-center gap-1">
@@ -50,30 +59,36 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="pot:flex hidden items-center gap-16">
-        <Link
-          href={"/"}
-          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
+      <button
+          onClick={() => scrollToElement("init", -20)}
+          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
+        >
+          Início
+        </button>
+        <button
+          onClick={() => scrollToElement("banner", -20)}
+          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Start Up
-        </Link>
-        <Link
-          href={"/"}
-          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
+        </button>
+        <button
+          onClick={() => scrollToElement("projects", -150)}
+          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Projectos
-        </Link>
-        <Link
-          href={"/"}
-          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
+        </button>
+        <button
+          onClick={() => scrollToElement("services", -60)}
+          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Serviços
-        </Link>
-        <Link
-          href={"/"}
-          className="text-zinc-800 text-[15px] font-semibold transition-all hover:underline hover:text-indigo-600"
+        </button>
+        <button
+          onClick={() => scrollToElement("team", -150)}
+          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
         >
           Team
-        </Link>
+        </button>
       </div>
       <div>
         <button className="pot:flex hidden items-center gap-2 font-semibold py-2 px-4 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600">

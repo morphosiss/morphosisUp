@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <section className="pot:pt-40 pt-32 relative">
+    <section  className="pot:pt-40 pt-32 relative">
       <div className="max-w-6xl px-5 w-full m-auto text-center">
         <button className="font-semibold flex items-center m-auto justify-center gap-1 px-3 py-1 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white">
           <svg

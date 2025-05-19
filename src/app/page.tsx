@@ -5,7 +5,7 @@ import Services from "./components/Home/MainComponents/Services";
 
 export default function Home() {
   return (
-    <div>
+    <div id="init">
       <Header />
       <main className="w-full">
         <Projects />
