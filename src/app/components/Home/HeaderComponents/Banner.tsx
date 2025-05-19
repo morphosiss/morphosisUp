@@ -49,7 +49,7 @@ const Banner = () => {
           <div className="flex ret:flex-row flex-col max-w-[25rem] gap-1 m-auto mt-10 w-full">
             <button
               onClick={() => scrollToElement("projects", -150)}
-              className="flex  cursor-pointer items-center justify-center gap-2 font-medium py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
+              className="flex cursor-pointer items-center justify-center gap-2 font-medium py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
             >
               Projectos
               <svg
