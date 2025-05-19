@@ -2,12 +2,17 @@ import data from "../data";
 import InfiniteScroll from "./Trends";
 import Navbar from "./HeaderComponents/Navbar";
 import Banner from "./HeaderComponents/Banner";
+import React from "react";
 
-const Header = () => {
+const Header: React.FC<{
+  setShowMenu: React.Dispatch<React.SetStateAction<string>>;
+}> = ({
+  setShowMenu
+}) => {
   return (
     <header className="py-4 back  relative">
       <div className="absolute bottom-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-transparent to-white"></div>
-      <Navbar />
+      <Navbar setShowMenu={setShowMenu} />
       <Banner />
       <section className="z-20 relative w-full left-0 right-0 flex items-start mt-14 gap-10">
         <InfiniteScroll cardData={data} />

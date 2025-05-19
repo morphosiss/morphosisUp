@@ -14,7 +14,11 @@ const Banner = () => {
   return (
     <section className="pot:pt-40 pt-32 relative">
       <div className="max-w-6xl px-5 w-full m-auto text-center">
-        <button className="font-semibold flex items-center m-auto justify-center gap-1 px-3 py-1 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white">
+        <Link
+          target="_blank"
+          href={"https://www.linkedin.com/company/morphosis-start-up"}
+          className="font-semibold inline-flex items-center m-auto justify-center gap-1 px-3 py-1 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -29,8 +33,8 @@ const Banner = () => {
             <path d="M19 8.268a2 2 0 0 1 1 1.732v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-8a2 2 0 0 1 2 -2h3" />
             <path d="M5 15.734a2 2 0 0 1 -1 -1.734v-8a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-3" />
           </svg>
-          Contacte-nos diretamente pelo WhatsApp
-        </button>
+          Contacte-nos diretamente pelo LinkedIn
+        </Link>
         <h1 className="det:text-[5rem] ret:text-5xl smaller:text-4xl text-4xl pot:text-7xl font-bold det:font-extrabold leading-none">
           Transformando <span className="text-indigo-500">tecnologia</span> em{" "}
           <span className="text-indigo-500">soluções ágeis</span> e eficientes!

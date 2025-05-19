@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import scrollToElement from "./ScrollToElement";
 
-const Navbar = () => {
+const Navbar: React.FC<{
+  setShowMenu: React.Dispatch<React.SetStateAction<string>>;
+}> = ({ setShowMenu }) => {
   const [scrollY, setScrollY] = useState<boolean>(false);
 
   useEffect(() => {
@@ -24,14 +27,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const scrollToElement = (elementId: string, offset: number) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      const yOffset = offset;
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
+  
 
   return (
     <nav
@@ -113,7 +109,10 @@ const Navbar = () => {
           </svg>
           Contrate-nos
         </Link>
-        <button className="text-indigo-600 pot:hidden inline-flex transition-all hover:text-indigo-500">
+        <button
+          onClick={() => setShowMenu("on")}
+          className="text-indigo-600 pot:hidden inline-flex transition-all hover:text-indigo-500"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

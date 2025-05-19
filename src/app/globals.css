@@ -25,6 +25,39 @@
 
 button {
   outline: none;
+  cursor: pointer;
+}
+
+.hideCard {
+  transform: translateX(-100%);
+}
+
+.onCard {
+  transform: translateX(-100%);
+  animation: onCard 0.5s forwards;
+}
+
+.offCard {
+  transform: translateX(0);
+  animation: offCard 0.5s forwards;
+}
+
+@keyframes onCard {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes offCard {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .animate-infinite-scroll {
