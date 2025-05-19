@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ProfileCard from "./ProfileCard";
 import CardData from "./CardData";
 import Link from "next/link";
-
+import { motion } from "framer-motion"
 interface ServiceComponent {
   aplication: string;
   tittle: string;
@@ -18,18 +18,41 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
   description,
   link,
 }) => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 100 }
+    }
+  };
   return (
-    <div className="bg-white shadow-lg flex flex-col justify-between p-5 rounded-xl">
-      <header className="">
+    <motion.div 
+    initial="hidden" whileInView="visible"
+      viewport={{ once: false, margin: "-100px" }}
+      variants={itemVariants}
+      className="bg-white shadow-lg flex flex-col justify-between p-5 rounded-xl">
+      <motion.header className="">
         <p className="text-[14px] mb-2 text-indigo-600 rounded-full  inline-flex font-medium">
           {aplication}
         </p>
         <h5 className="text-xl font-medium text-indigo-600">{tittle}</h5>
 
-        <div className="border-t border-zinc-100 mt-1 pt-3">
+        <motion.div className="border-t border-zinc-100 mt-1 pt-3">
           <p className="text-[15px] font-[450] text-zinc-800">{description}</p>
-        </div>
-      </header>
+        </motion.div>
+      </motion.header>
       <footer className="pt-5">
         <Link
           href={link}
@@ -54,7 +77,7 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
           </svg>
         </Link>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 
@@ -81,19 +104,44 @@ const Services = () => {
     };
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 100 }
+    }
+  };
+
+
   return (
     <section id="services" className="pb-32 relative back mt-28">
-      <div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></div>
-      <div className="pt-28 relative">
-        <header className="text-center px-5 max-w-xl w-full mx-auto ">
+      <motion.div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></motion.div>
+      <motion.div className="pt-28 relative">
+        <motion.header className="text-center px-5 max-w-xl w-full mx-auto ">
           <h2 className="pot:font-semibold font-medium text-3xl pot:text-4xl">Serviços</h2>
           <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Oferecemos uma ampla gama de serviços para atender às suas
             necessidades tecnológicas.
           </h5>
-        </header>
+        </motion.header>
 
-        <div className="grid mt-16 gap-2 ret:grid-cols-2 grid-cols-1 px-5 pot:grid-cols-4 max-w-7xl w-full mx-auto">
+        <motion.div
+          initial="hidden" whileInView="visible"
+          viewport={{ once: false, margin: "-100px" }}
+          variants={containerVariants}
+          className="grid mt-16 gap-2 ret:grid-cols-2 grid-cols-1 px-5 pot:grid-cols-4 max-w-7xl w-full mx-auto">
           <ServiceComponent
             aplication="Web / Mobile / Desktop"
             tittle="Protótipo de Aplicações"
@@ -120,19 +168,19 @@ const Services = () => {
             description="Desenvolvemos aplicativos móveis nativos e híbridos para Android e iOS, com foco na experiência do usuário e desempenho."
             link="https://wa.me/5511999999999?text=Olá!%20Tenho%20interesse%20em%20Aplicativos%20Móveis.%20Gostaria%20de%20saber%20mais%20detalhes."
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <section id="team" className="mt-48 px-5">
-        <header className="text-center max-w-xl w-full mx-auto ">
+      <motion.section initial="hidden" whileInView="visible" variants={containerVariants} id="team" className="mt-48 px-5">
+        <motion.header variants={itemVariants} className="text-center max-w-xl w-full mx-auto ">
           <h2 className="pot:font-semibold font-medium text-4xl">Team</h2>
           <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Nossa equipe é composta por profissionais altamente qualificados e
             experientes, prontos para atender às suas necessidades.
           </h5>
-        </header>
-        <div className="grid pb-5  w-full mx-auto grid-cols-1 mt-10 gap-1">
-          <div className="grid max-w-[85rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-4 gap-1">
+        </motion.header>
+        <motion.div className="grid pb-5  w-full mx-auto grid-cols-1 mt-10 gap-1">
+          <motion.div className="grid max-w-[85rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-4 gap-1">
             {CardData.slice(0, 4).map((card, index) => (
               <ProfileCard
                 key={index}
@@ -143,9 +191,9 @@ const Services = () => {
                 linkedinLink={card.linkedinLink}
               />
             ))}
-          </div>
+          </motion.div>
           {!isRestricted ? (
-            <div className="grid max-w-[68rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 gap-1">
+            <motion.div className="grid max-w-[68rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 gap-1">
               {CardData.slice(4, 7).map((card, index) => (
                 <ProfileCard
                   key={index}
@@ -156,9 +204,9 @@ const Services = () => {
                   linkedinLink={card.linkedinLink}
                 />
               ))}
-            </div>
+            </motion.div>
           ) : (
-            <div className="grid max-w-[68rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 gap-1">
+            <motion.div className="grid max-w-[68rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 gap-1">
               {CardData.slice(4, 9).map((card, index) => (
                 <ProfileCard
                   key={index}
@@ -169,10 +217,10 @@ const Services = () => {
                   linkedinLink={card.linkedinLink}
                 />
               ))}
-            </div>
+            </motion.div>
           )}
           {!isRestricted && (
-            <div className="grid max-w-[46rem] mx-auto grid-cols-2 gap-1">
+            <motion.div className="grid max-w-[46rem] mx-auto grid-cols-2 gap-1">
               {CardData.slice(7, 9).map((card, index) => (
                 <ProfileCard
                   key={index}
@@ -183,10 +231,10 @@ const Services = () => {
                   linkedinLink={card.linkedinLink}
                 />
               ))}
-            </div>
+            </motion.div>
           )}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </section>
   );
 };

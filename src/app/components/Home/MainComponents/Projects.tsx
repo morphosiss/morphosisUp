@@ -1,19 +1,44 @@
 import Link from "next/link";
-
+import { motion } from "framer-motion"
 const Projects = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 100 }
+    }
+  };
+
   return (
-    <section id="projects" className="w-full px-5">
-      <header className="text-center max-w-xl w-full mx-auto mt-28">
-        <h2 className="pot:font-semibold font-medium pot:text-4xl text-3xl">Principais Projectos</h2>
-        <h5 className="pt-2 font-[450] text-[18px] text-zinc-700">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, margin: "-100px" }}
+      variants={containerVariants}
+      id="projects" className="w-full px-5">
+      <motion.header className="text-center max-w-xl w-full mx-auto mt-28">
+        <motion.h2 variants={itemVariants} className="pot:font-semibold font-medium pot:text-4xl text-3xl">Principais Projectos</motion.h2>
+        <motion.h5 variants={itemVariants} className="pt-2 font-[450] text-[18px] text-zinc-700">
           Aqui estão alguns dos nossos projectos mais recentes, que demonstram a
           nossa experiência e dedicação em fornecer soluções inovadoras e
           eficientes para os nossos clientes.
-        </h5>
-      </header>
-      <div className="max-w-[20rem] pb-5 w-full grid gap-1 grid-cols-1  mx-auto mt-10">
-        <div className="p-5 h-72 flex flex-col justify-between bg-indigo-500">
-          <header className="flex items-center gap-2">
+        </motion.h5>
+      </motion.header>
+      <motion.div variants={itemVariants} className="max-w-[20rem] pb-5 w-full grid gap-1 grid-cols-1  mx-auto mt-10">
+        <motion.div className="p-5 h-72 flex flex-col justify-between bg-indigo-500">
+          <motion.header className="flex items-center gap-2">
             <span>
               <svg
                 className="w-7"
@@ -54,9 +79,9 @@ const Projects = () => {
               </svg>
             </span>
             <p className="text-xl text-white font-['Poppins']">Cavaleiro</p>
-          </header>
-          <footer>
-            <div className="flex flex-wrap gap-0">
+          </motion.header>
+          <motion.footer>
+            <motion.div className="flex flex-wrap gap-0">
               <p className="px-3 py-1 rounded-l-full bg-indigo-700 text-white inline-flex text-[14px] font-medium mb-2 border border-indigo-400">
                 Finalizado
               </p>
@@ -67,16 +92,16 @@ const Projects = () => {
               >
                 Visitar Website
               </Link>
-            </div>
-            <p className="text-white font-[450]">
+            </motion.div>
+            <motion.p className="text-white font-[450]">
               Plataforma de gestão de partidas de xadrez, com funcionalidades
               como agendamento de partidas, gestão de jogadores e estatísticas
               de desempenho.
-            </p>
-          </footer>
-        </div>
-      </div>
-    </section>
+            </motion.p>
+          </motion.footer>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 
