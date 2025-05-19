@@ -51,7 +51,7 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
 
 const Services = () => {
   return (
-    <section className=" relative back mt-28">
+    <section className="pb-32 relative back mt-28">
       <div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></div>
       <div className="pt-28 relative">
         <header className="text-center max-w-xl w-full mx-auto ">

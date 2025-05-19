@@ -63,7 +63,7 @@ const Projects = () => {
               <Link
                 href={"https://cavaleiro.tech"}
                 target="_blank"
-                className="px-3 py-1  underline rounded-r-full bg-indigo-700 text-white inline-flex text-[14px] font-semibold mb-2 border border-indigo-400"
+                className="px-3 py-1  underline transition-all hover:bg-indigo-800 rounded-r-full bg-indigo-700 text-white inline-flex text-[14px] font-semibold mb-2 border border-indigo-400"
               >
                 Visitar Website
               </Link>
