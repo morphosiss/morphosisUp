@@ -27,7 +27,7 @@ export default function Home() {
         <div className="flex px-5 py-7 h-full relative items-center justify-center gap-5 flex-col">
           <button
             onClick={() => setShowMenu("off")}
-            className="absolute transition-all hover:bg-indigo-700 top-5 ring-0 px-4 py-1 z-50 rounded-full left-1/2 -translate-x-1/2 bg-indigo-500 text-white font-semibold"
+            className="absolute transition-all hover:bg-indigo-700 top-5 ring-0 px-4 py-1 z-50 rounded-full left-1/2 -translate-x-1/2 bg-indigo-500 text-white font-medium"
           >
             Cancelar
           </button>
@@ -49,7 +49,7 @@ export default function Home() {
               setShowMenu("off");
               scrollToElement("init", -20);
             }}
-            className="w-full transition-all hover:text-indigo-600 text-lg gap-2 justify-center font-medium flex items-end "
+            className="w-full transition-all hover:text-indigo-600 text-xl gap-2 justify-center font-medium flex items-end "
           >
             Início
           </button>
@@ -58,7 +58,7 @@ export default function Home() {
               setShowMenu("off");
               scrollToElement("banner", -20);
             }}
-            className="w-full transition-all hover:text-indigo-600 text-lg gap-1 justify-center font-medium flex items-end "
+            className="w-full transition-all hover:text-indigo-600 text-xl gap-1 justify-center font-medium flex items-end "
           >
             Start Up
           </button>
@@ -67,7 +67,7 @@ export default function Home() {
               setShowMenu("off");
               scrollToElement("projects", -150);
             }}
-            className="w-full transition-all hover:text-indigo-600 text-lg gap-1 justify-center font-medium flex items-end "
+            className="w-full transition-all hover:text-indigo-600 text-xl gap-1 justify-center font-medium flex items-end "
           >
             Projectos
           </button>
@@ -76,7 +76,7 @@ export default function Home() {
               setShowMenu("off");
               scrollToElement("services", -60);
             }}
-            className="w-full transition-all hover:text-indigo-600 text-lg gap-1 justify-center font-medium flex items-end "
+            className="w-full transition-all hover:text-indigo-600 text-xl gap-1 justify-center font-medium flex items-end "
           >
             Serviços
           </button>
@@ -85,7 +85,7 @@ export default function Home() {
               setShowMenu("off");
               scrollToElement("team", -150);
             }}
-            className="w-full transition-all hover:text-indigo-600 text-lg gap-1 justify-center font-medium flex items-end "
+            className="w-full transition-all hover:text-indigo-600 text-xl gap-1 justify-center font-medium flex items-end "
           >
             Team
           </button>
