@@ -49,11 +49,12 @@ h3,
 h4,
 h5,
 h6,
-span, p, a, button {
+span,
+p,
+a,
+button {
   font-family: "Cabine Grotesk", sans-serif;
 }
-
-
 
 body {
   background: #fff;
@@ -85,4 +86,21 @@ body {
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+.func {
+  font-family: var(--font-inter);
+}
+
+.scrolled {
+  animation: infinite-scroll 25s linear infinite;
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

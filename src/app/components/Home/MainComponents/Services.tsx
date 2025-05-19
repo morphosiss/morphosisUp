@@ -1,4 +1,6 @@
 import React from "react";
+import ProfileCard from "./ProfileCard";
+import CardData from "./CardData";
 
 interface ServiceComponent {
   aplication: string;
@@ -54,7 +56,7 @@ const Services = () => {
       <div className="pt-28 relative">
         <header className="text-center max-w-xl w-full mx-auto ">
           <h2 className="font-bold text-4xl">Serviços</h2>
-          <h5 className="pt-2 font-medium text-[18px] text-zinc-700">
+          <h5 className="pt-2 font-medium text-[18px] text-zinc-800">
             Oferecemos uma ampla gama de serviços para atender às suas
             necessidades tecnológicas.
           </h5>
@@ -85,6 +87,54 @@ const Services = () => {
           />
         </div>
       </div>
+
+      <section className="mt-48">
+        <header className="text-center max-w-xl w-full mx-auto ">
+          <h2 className="font-bold text-4xl">Team</h2>
+          <h5 className="pt-2 font-medium text-[18px] text-zinc-800">
+            Nossa equipe é composta por profissionais altamente qualificados e
+            experientes, prontos para atender às suas necessidades.
+          </h5>
+        </header>
+        <div className="grid pb-5  w-full mx-auto grid-cols-1 mt-10 gap-1">
+          <div className="grid max-w-[85rem] mx-auto grid-cols-4 gap-1">
+            {CardData.slice(0, 4).map((card, index) => (
+              <ProfileCard
+                key={index}
+                name={card.name}
+                description={card.description}
+                imageUrl={card.imageUrl}
+                func={card.func}
+                linkedinLink={card.linkedinLink}
+              />
+            ))}
+          </div>
+          <div className="grid max-w-[68rem] mx-auto grid-cols-3 gap-1">
+            {CardData.slice(4, 7).map((card, index) => (
+              <ProfileCard
+                key={index}
+                name={card.name}
+                description={card.description}
+                imageUrl={card.imageUrl}
+                func={card.func}
+                linkedinLink={card.linkedinLink}
+              />
+            ))}
+          </div>
+          <div className="grid max-w-[46rem] mx-auto grid-cols-2 gap-1">
+            {CardData.slice(7, 9).map((card, index) => (
+              <ProfileCard
+                key={index}
+                name={card.name}
+                description={card.description}
+                imageUrl={card.imageUrl}
+                func={card.func}
+                linkedinLink={card.linkedinLink}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
