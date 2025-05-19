@@ -1,6 +1,18 @@
+"use client";
+
+import Link from "next/link";
+
 const Banner = () => {
+  const scrollToElement = (elementId: string, offset: number) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const yOffset = offset;
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
   return (
-    <section  className="pot:pt-40 pt-32 relative">
+    <section className="pot:pt-40 pt-32 relative">
       <div className="max-w-6xl px-5 w-full m-auto text-center">
         <button className="font-semibold flex items-center m-auto justify-center gap-1 px-3 py-1 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white">
           <svg
@@ -31,7 +43,10 @@ const Banner = () => {
           </p>
 
           <div className="flex ret:flex-row flex-col max-w-[25rem] gap-1 m-auto mt-10 w-full">
-            <button className="flex  cursor-pointer items-center justify-center gap-2 font-semibold py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600">
+            <button
+              onClick={() => scrollToElement("projects", -150)}
+              className="flex  cursor-pointer items-center justify-center gap-2 font-semibold py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
+            >
               Projectos
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +63,11 @@ const Banner = () => {
                 <path d="M4 14l8 4l8 -4" />
               </svg>
             </button>
-            <button className="flex items-center justify-center hover:text-indigo-600 border border-transparent cursor-pointer gap-2  font-semibold text-lg py-2 px-4 rounded-lg  text-indigo-500 transition-all hover:border hover:border-indigo-500">
+            <Link
+              href={"https://wa.me/244954018728"}
+              target="_blank"
+              className="flex items-center justify-center hover:text-indigo-600 border border-transparent cursor-pointer gap-2  font-semibold text-lg py-2 px-4 rounded-lg  text-indigo-500 transition-all hover:border hover:border-indigo-500"
+            >
               Fale connosco
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +84,7 @@ const Banner = () => {
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M13 7h-6l4 5l-4 5h6l4 -5z" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

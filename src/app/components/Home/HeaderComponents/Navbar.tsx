@@ -9,15 +9,14 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const navbar = document.querySelector("nav");
-      if (navbar) {
-        if (scrollTop > 0) {
-          setScrollY(true);
-        } else {
-          setScrollY(false);
-        }
+      if (scrollTop > 0) {
+        setScrollY(true);
+      } else {
+        setScrollY(false);
       }
     };
+
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -59,7 +58,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="pot:flex hidden items-center gap-16">
-      <button
+        <button
           onClick={() => scrollToElement("init", -20)}
           className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
         >
@@ -91,7 +90,11 @@ const Navbar = () => {
         </button>
       </div>
       <div>
-        <button className="pot:flex hidden items-center gap-2 font-semibold py-2 px-4 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600">
+        <Link
+          target="_blank"
+          href={"mailto:startupmorphosis@gmail.com"}
+          className="pot:flex hidden items-center gap-2 font-semibold py-2 px-4 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -109,7 +112,7 @@ const Navbar = () => {
             <path d="M15 13l2 2" />
           </svg>
           Contrate-nos
-        </button>
+        </Link>
         <button className="text-indigo-600 pot:hidden inline-flex transition-all hover:text-indigo-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
