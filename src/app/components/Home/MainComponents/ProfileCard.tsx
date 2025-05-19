@@ -26,7 +26,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           <Link
             href={linkedinLink}
             target="_blank"
-            className="text-md transition-all hover:underline flex items-center gap-1 func font-medium leading-none"
+            className="text-lg transition-all hover:underline flex items-center gap-1  font-medium leading-none"
           >
             {name}
             <svg
@@ -44,13 +44,13 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
               <path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" />
             </svg>
           </Link>
-          <p className="text-[13.30px] font-medium func  text-indigo-500">
+          <p className="text-[14px] font-[480]   text-indigo-500">
             {func}
           </p>
         </div>
       </header>
       <div className="mt-3">
-        <p className="func text-[14px] text-zinc-700">{description}</p>
+        <p className=" text-[15px] font-[450] text-zinc-700">{description}</p>
       </div>
     </div>
   );

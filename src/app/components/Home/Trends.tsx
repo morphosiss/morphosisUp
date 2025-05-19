@@ -10,7 +10,7 @@ interface CardComponentProps {
 const CardComponent: React.FC<CardComponentProps> = ({ title }) => {
   return (
     <div className="py-3 justify-between gap-4 px-6 w-auto flex items-center">
-      <h4 className="text-lg text-nowrap font-semibold text-white">{title}</h4>
+      <h4 className="text-lg text-nowrap font-medium text-white">{title}</h4>
     </div>
   );
 };

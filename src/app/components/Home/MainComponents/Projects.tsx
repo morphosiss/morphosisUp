@@ -4,8 +4,8 @@ const Projects = () => {
   return (
     <section id="projects" className="w-full px-5">
       <header className="text-center max-w-xl w-full mx-auto mt-28">
-        <h2 className="font-bold pot:text-4xl text-3xl">Principais Projectos</h2>
-        <h5 className="pt-2 font- text-[18px] text-zinc-700">
+        <h2 className="font-semibold pot:text-4xl text-3xl">Principais Projectos</h2>
+        <h5 className="pt-2 font-[450] text-[18px] text-zinc-700">
           Aqui estão alguns dos nossos projectos mais recentes, que demonstram a
           nossa experiência e dedicação em fornecer soluções inovadoras e
           eficientes para os nossos clientes.
@@ -57,18 +57,18 @@ const Projects = () => {
           </header>
           <footer>
             <div className="flex flex-wrap gap-0">
-              <p className="px-3 py-1 rounded-l-full bg-indigo-700 text-white inline-flex text-[14px] font-semibold mb-2 border border-indigo-400">
+              <p className="px-3 py-1 rounded-l-full bg-indigo-700 text-white inline-flex text-[14px] font-medium mb-2 border border-indigo-400">
                 Finalizado
               </p>
               <Link
                 href={"https://cavaleiro.tech"}
                 target="_blank"
-                className="px-3 py-1  underline transition-all hover:bg-indigo-800 rounded-r-full bg-indigo-700 text-white inline-flex text-[14px] font-semibold mb-2 border border-indigo-400"
+                className="px-3 py-1  underline transition-all hover:bg-indigo-800 rounded-r-full bg-indigo-700 text-white inline-flex text-[14px] font-medium mb-2 border border-indigo-400"
               >
                 Visitar Website
               </Link>
             </div>
-            <p className="text-white font-medium">
+            <p className="text-white font-[450]">
               Plataforma de gestão de partidas de xadrez, com funcionalidades
               como agendamento de partidas, gestão de jogadores e estatísticas
               de desempenho.

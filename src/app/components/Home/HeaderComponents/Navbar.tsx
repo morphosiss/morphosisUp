@@ -48,7 +48,7 @@ const Navbar: React.FC<{
               fill="currentColor"
             />
           </svg>
-          <span className="pot:text-2xl text-xl font-semibold text-indigo-600">
+          <span className="pot:text-2xl text-xl font-medium text-indigo-600">
             morphosis Up
           </span>
         </Link>
@@ -56,31 +56,31 @@ const Navbar: React.FC<{
       <div className="pot:flex hidden items-center gap-16">
         <button
           onClick={() => scrollToElement("init", -20)}
-          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[16px] cursor-pointer font-medium transition-all hover:underline hover:text-indigo-600"
         >
           Início
         </button>
         <button
           onClick={() => scrollToElement("banner", -20)}
-          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] cursor-pointer font-medium transition-all hover:underline hover:text-indigo-600"
         >
           Start Up
         </button>
         <button
           onClick={() => scrollToElement("projects", -150)}
-          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] cursor-pointer font-medium transition-all hover:underline hover:text-indigo-600"
         >
           Projectos
         </button>
         <button
           onClick={() => scrollToElement("services", -60)}
-          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] cursor-pointer font-medium transition-all hover:underline hover:text-indigo-600"
         >
           Serviços
         </button>
         <button
           onClick={() => scrollToElement("team", -150)}
-          className="text-zinc-800 text-[15px] cursor-pointer font-semibold transition-all hover:underline hover:text-indigo-600"
+          className="text-zinc-800 text-[15px] cursor-pointer font-medium transition-all hover:underline hover:text-indigo-600"
         >
           Team
         </button>
@@ -89,7 +89,7 @@ const Navbar: React.FC<{
         <Link
           target="_blank"
           href={"mailto:startupmorphosis@gmail.com"}
-          className="pot:flex hidden items-center gap-2 font-semibold py-2 px-4 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
+          className="pot:flex hidden items-center gap-2 font-medium py-2 px-4 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

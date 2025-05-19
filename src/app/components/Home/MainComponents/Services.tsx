@@ -21,10 +21,10 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
   return (
     <div className="bg-white shadow-lg flex flex-col justify-between p-5 rounded-xl">
       <header className="">
-        <p className="text-[14px] mb-2 text-indigo-600 rounded-full  inline-flex font-semibold">
+        <p className="text-[14px] mb-2 text-indigo-600 rounded-full  inline-flex font-medium">
           {aplication}
         </p>
-        <h5 className="text-xl font-semibold text-indigo-600">{tittle}</h5>
+        <h5 className="text-xl font-medium text-indigo-600">{tittle}</h5>
 
         <div className="border-t border-zinc-100 mt-1 pt-3">
           <p className="text-[15px] font-[450] text-zinc-800">{description}</p>
@@ -34,7 +34,7 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
         <Link
           href={link}
           target="_blank"
-          className="flex transition-all hover:bg-indigo-700 cursor-pointer items-center justify-between w-full mt-5 bg-indigo-600 text-white font-semibold py-2.5 px-3 rounded-lg"
+          className="flex transition-all hover:bg-indigo-700 cursor-pointer items-center justify-between w-full mt-5 bg-indigo-600 text-white font-medium py-2.5 px-3 rounded-lg"
         >
           Solicitar
           <svg
@@ -86,8 +86,8 @@ const Services = () => {
       <div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></div>
       <div className="pt-28 relative">
         <header className="text-center px-5 max-w-xl w-full mx-auto ">
-          <h2 className="font-bold text-3xl pot:text-4xl">Serviços</h2>
-          <h5 className="pt-2 font-medium text-[18px] text-zinc-800">
+          <h2 className="font-semibold text-3xl pot:text-4xl">Serviços</h2>
+          <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Oferecemos uma ampla gama de serviços para atender às suas
             necessidades tecnológicas.
           </h5>
@@ -125,8 +125,8 @@ const Services = () => {
 
       <section id="team" className="mt-48 px-5">
         <header className="text-center max-w-xl w-full mx-auto ">
-          <h2 className="font-bold text-4xl">Team</h2>
-          <h5 className="pt-2 font-medium text-[18px] text-zinc-800">
+          <h2 className="font-semibold text-4xl">Team</h2>
+          <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Nossa equipe é composta por profissionais altamente qualificados e
             experientes, prontos para atender às suas necessidades.
           </h5>

@@ -17,7 +17,7 @@ const Banner = () => {
         <Link
           target="_blank"
           href={"https://www.linkedin.com/company/morphosis-start-up"}
-          className="font-semibold inline-flex items-center m-auto justify-center gap-1 px-3 py-1 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white"
+          className="font-medium inline-flex items-center m-auto text-[14px] pot:text-base justify-center gap-1 px-3 py-1 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const Banner = () => {
           </svg>
           Contacte-nos diretamente pelo LinkedIn
         </Link>
-        <h1 className="det:text-[5rem] ret:text-5xl smaller:text-4xl text-4xl pot:text-7xl font-bold det:font-extrabold leading-none">
+        <h1 className="det:text-[5rem] ret:text-5xl smaller:text-4xl text-4xl pot:text-7xl font-bold det:font-semibold leading-none">
           Transformando <span className="text-indigo-500">tecnologia</span> em{" "}
           <span className="text-indigo-500">soluções ágeis</span> e eficientes!
         </h1>
@@ -49,7 +49,7 @@ const Banner = () => {
           <div className="flex ret:flex-row flex-col max-w-[25rem] gap-1 m-auto mt-10 w-full">
             <button
               onClick={() => scrollToElement("projects", -150)}
-              className="flex  cursor-pointer items-center justify-center gap-2 font-semibold py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
+              className="flex  cursor-pointer items-center justify-center gap-2 font-medium py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600"
             >
               Projectos
               <svg
@@ -70,7 +70,7 @@ const Banner = () => {
             <Link
               href={"https://wa.me/244954018728"}
               target="_blank"
-              className="flex items-center justify-center hover:text-indigo-600 border border-transparent cursor-pointer gap-2  font-semibold text-lg py-2 px-4 rounded-lg  text-indigo-500 transition-all hover:border hover:border-indigo-500"
+              className="flex items-center justify-center hover:text-indigo-600 border border-transparent cursor-pointer gap-2  font-medium text-lg py-2 px-4 rounded-lg  text-indigo-500 transition-all hover:border hover:border-indigo-500"
             >
               Fale connosco
               <svg

@@ -20,7 +20,7 @@ const Header: React.FC<{
       <section id="banner" className="relative pt-32">
         <div className="max-w-3xl w-full mx-auto text-center">
           <header>
-            <h2 className="font-bold pot:text-5xl ret:text-4xl text-3xl">
+            <h2 className="font-semibold pot:text-5xl ret:text-4xl text-3xl">
               Quem Somos?
             </h2>
           </header>
@@ -47,10 +47,10 @@ const Header: React.FC<{
               </header>
 
               <footer className="mt-10 text-start">
-                <h3 className="text-start text-indigo-600 font-semibold text-lg">
+                <h3 className="text-start text-indigo-600 font-medium text-lg">
                   Somos Metamorfose Tecnológica
                 </h3>
-                <p className="font-medium pt-3 text-zinc-800">
+                <p className="font-[450] pt-3 text-zinc-800">
                   Surgimos na necessidade de transformar a tecnologia em
                   soluções inovadoras e eficientes para atingir os problemas do
                   dia a dia. Diferenciamo-nos pela nossas características
@@ -85,10 +85,10 @@ const Header: React.FC<{
               </header>
 
               <footer className="mt-10 text-start">
-                <h3 className="text-start text-indigo-600 font-semibold text-lg">
+                <h3 className="text-start text-indigo-600 font-medium text-lg">
                   Missão
                 </h3>
-                <p className="font-medium pt-3 text-zinc-800">
+                <p className="font-[450] pt-3 text-zinc-800">
                   Proporcionar soluções tecnológicas inovadoras, ágeis e
                   elegantes, adaptando-se ás necessidades específicas de cada
                   cliente e oferecendo experiências digitais leves, eficientes e
@@ -118,22 +118,22 @@ const Header: React.FC<{
               </header>
 
               <footer className="mt-10 text-start">
-                <h3 className="text-start text-indigo-600 font-semibold text-lg">
+                <h3 className="text-start text-indigo-600 font-medium text-lg">
                   Principais Objectivos
                 </h3>
                 <div className="flex flex-col gap-0 leading-snug">
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Ser referência em desenvolvimento tecnológico adaptativo.
                   </p>
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Expandir o portfólio de soluções, atendendo diferences
                     segmentos.
                   </p>
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Fidelizar clientes através da excelência na experiência do
                     cliente.
                   </p>
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Crescer de forma sustentável, formando parcerias
                     estratégicas.
                   </p>
@@ -162,23 +162,23 @@ const Header: React.FC<{
               </header>
 
               <footer className="mt-10 text-start">
-                <h3 className="text-start text-indigo-600 font-semibold text-lg">
+                <h3 className="text-start text-indigo-600 font-medium text-lg">
                   Nossos Valores
                 </h3>
                 <div className="flex flex-col gap-0 leading-snug">
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Adaptação constante - sempre prontos para evoluir com os
                     desafios.
                   </p>
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Excelência com leveza - buscamos a máxima qualidade sem
                     perder a fluidez e simplicidade.
                   </p>
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Agilidade e Eficiência - soluções rápidas, mas sem
                     comprometer a qualidade do producto.
                   </p>
-                  <p className="font-medium pt-3 text-zinc-800">
+                  <p className="font-[450] pt-3 text-zinc-800">
                     - Inovação Prática - aplicamos a tecnologia de ponta para
                     resolver problemas reais de forma objectiva.
                   </p>

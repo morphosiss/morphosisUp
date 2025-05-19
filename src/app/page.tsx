@@ -110,7 +110,7 @@ export default function Home() {
                 fill="currentColor"
               />
             </svg>
-            <span className="text-xl font-semibold text-white">
+            <span className="text-xl font-medium text-white">
               morphosis Up
             </span>
           </Link>
@@ -184,7 +184,7 @@ export default function Home() {
         </div>
 
         <div>
-          <p className="text-white text-[15px] font-semibold">
+          <p className="text-white text-[15px] font-medium text-center">
             © 2025 morphosis Up. Todos os direitos reservados.
           </p>
         </div>
