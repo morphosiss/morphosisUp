@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import { motion } from "framer-motion"
 interface ProfileCardProps {
   name: string;
   description: string;
@@ -16,8 +16,21 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   func,
   linkedinLink,
 }) => {
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 100 }
+    }
+  };
+
   return (
-    <div className="bg-white p-5 shadow-lg rounded-2xl">
+    <motion.div
+      initial="hidden" whileInView="visible"
+      viewport={{ once: false, margin: "-100px" }}
+      variants={itemVariants} className="bg-white p-5 shadow-lg rounded-2xl">
       <header className="flex items-center border-b border-zinc-200 pb-2 gap-3">
         <div
           className={`w-10 flex h-10 rounded-full ${imageUrl} bg-top bg-cover`}
@@ -52,7 +65,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       <div className="mt-3">
         <p className=" text-[15px] font-[450] text-zinc-700">{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
