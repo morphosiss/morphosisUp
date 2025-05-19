@@ -1,8 +1,8 @@
 const Banner = () => {
   return (
-    <section className="pt-40 relative">
-      <div className="max-w-6xl w-full m-auto text-center">
-        <button className="font-semibold flex items-center m-auto justify-center gap-1 px-3 py-1.5 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white">
+    <section className="pot:pt-40 pt-32 relative">
+      <div className="max-w-6xl px-5 w-full m-auto text-center">
+        <button className="font-semibold flex items-center m-auto justify-center gap-1 px-3 py-1 mb-4 ring-2 ring-indigo-500/40 rounded-full bg-indigo-600 text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -19,18 +19,19 @@ const Banner = () => {
           </svg>
           Contacte-nos diretamente pelo WhatsApp
         </button>
-        <h1 className="text-7xl font-bold">
-          Transformando <span className="text-indigo-500">tecnologia</span> em <span className="text-indigo-500">soluções ágeis</span> e eficientes!
+        <h1 className="det:text-[5rem] ret:text-5xl smaller:text-4xl text-4xl pot:text-7xl font-bold det:font-extrabold leading-none">
+          Transformando <span className="text-indigo-500">tecnologia</span> em{" "}
+          <span className="text-indigo-500">soluções ágeis</span> e eficientes!
         </h1>
         <div className="mt-5 max-w-2xl w-full m-auto">
-          <p className="text-lg ">
+          <p className="text-lg">
             Somos uma empresa de tecnologia focada em soluções inovadoras para o
             seu negócio. Nossa equipe de especialistas está pronta para ajudar
             você a alcançar seus objetivos com eficiência e agilidade.
           </p>
 
-          <div className="flex max-w-[25rem] gap-1 m-auto mt-10 w-full">
-            <button className="flex cursor-pointer items-center justify-center gap-2 font-semibold py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600">
+          <div className="flex ret:flex-row flex-col max-w-[25rem] gap-1 m-auto mt-10 w-full">
+            <button className="flex  cursor-pointer items-center justify-center gap-2 font-semibold py-3 px-5 rounded-lg bg-indigo-500 text-white transition-all hover:bg-indigo-600">
               Projectos
               <svg
                 xmlns="http://www.w3.org/2000/svg"

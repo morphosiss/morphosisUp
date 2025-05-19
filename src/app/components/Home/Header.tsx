@@ -15,9 +15,11 @@ const Header = () => {
       <section className="relative pt-32">
         <div className="max-w-3xl w-full mx-auto text-center">
           <header>
-            <h2 className="font-bold text-5xl">Quem Somos?</h2>
+            <h2 className="font-bold pot:text-5xl ret:text-4xl text-3xl">
+              Quem Somos?
+            </h2>
           </header>
-          <div className="grid mt-14  pb-5 grid-cols-2 gap-2">
+          <div className="grid mt-14  pb-5 grid-cols-1 px-5 ret:grid-cols-2 gap-2">
             <div className="p-5 rounded-xl  bg-white border border-gray-200">
               <header>
                 <span>
@@ -26,9 +28,9 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="icon size-7 text-indigo-600 icon-tabler icons-tabler-outline icon-tabler-dna"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -61,9 +63,9 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="icon size-6 text-indigo-600 icon-tabler icons-tabler-outline icon-tabler-timeline-event-text"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -99,9 +101,9 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="icon size-6 text-indigo-600 icon-tabler icons-tabler-outline icon-tabler-flag-3"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -142,9 +144,9 @@ const Header = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     className="icon size-6 text-indigo-600 icon-tabler icons-tabler-outline icon-tabler-bookmarks"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import ProfileCard from "./ProfileCard";
 import CardData from "./CardData";
 
@@ -33,9 +35,9 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="icon size-5 icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -50,19 +52,41 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
 };
 
 const Services = () => {
+  const [isRestricted, setIsRestricted] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 900) {
+        setIsRestricted(true);
+      } else {
+        setIsRestricted(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="pb-32 relative back mt-28">
       <div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></div>
       <div className="pt-28 relative">
-        <header className="text-center max-w-xl w-full mx-auto ">
-          <h2 className="font-bold text-4xl">Serviços</h2>
+        <header className="text-center px-5 max-w-xl w-full mx-auto ">
+          <h2 className="font-bold text-3xl pot:text-4xl">Serviços</h2>
           <h5 className="pt-2 font-medium text-[18px] text-zinc-800">
             Oferecemos uma ampla gama de serviços para atender às suas
             necessidades tecnológicas.
           </h5>
         </header>
 
-        <div className="grid mt-16 gap-2 grid-cols-4 max-w-7xl w-full mx-auto">
+        <div className="grid mt-16 gap-2 ret:grid-cols-2 grid-cols-1 px-5 pot:grid-cols-4 max-w-7xl w-full mx-auto">
           <ServiceComponent
             aplication="Web / Mobile / Desktop"
             tittle="Protótipo de Aplicações"
@@ -88,7 +112,7 @@ const Services = () => {
         </div>
       </div>
 
-      <section className="mt-48">
+      <section className="mt-48 px-5">
         <header className="text-center max-w-xl w-full mx-auto ">
           <h2 className="font-bold text-4xl">Team</h2>
           <h5 className="pt-2 font-medium text-[18px] text-zinc-800">
@@ -97,7 +121,7 @@ const Services = () => {
           </h5>
         </header>
         <div className="grid pb-5  w-full mx-auto grid-cols-1 mt-10 gap-1">
-          <div className="grid max-w-[85rem] mx-auto grid-cols-4 gap-1">
+          <div className="grid max-w-[85rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-4 gap-1">
             {CardData.slice(0, 4).map((card, index) => (
               <ProfileCard
                 key={index}
@@ -109,30 +133,47 @@ const Services = () => {
               />
             ))}
           </div>
-          <div className="grid max-w-[68rem] mx-auto grid-cols-3 gap-1">
-            {CardData.slice(4, 7).map((card, index) => (
-              <ProfileCard
-                key={index}
-                name={card.name}
-                description={card.description}
-                imageUrl={card.imageUrl}
-                func={card.func}
-                linkedinLink={card.linkedinLink}
-              />
-            ))}
-          </div>
-          <div className="grid max-w-[46rem] mx-auto grid-cols-2 gap-1">
-            {CardData.slice(7, 9).map((card, index) => (
-              <ProfileCard
-                key={index}
-                name={card.name}
-                description={card.description}
-                imageUrl={card.imageUrl}
-                func={card.func}
-                linkedinLink={card.linkedinLink}
-              />
-            ))}
-          </div>
+          {!isRestricted ? (
+            <div className="grid max-w-[68rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 gap-1">
+              {CardData.slice(4, 7).map((card, index) => (
+                <ProfileCard
+                  key={index}
+                  name={card.name}
+                  description={card.description}
+                  imageUrl={card.imageUrl}
+                  func={card.func}
+                  linkedinLink={card.linkedinLink}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="grid max-w-[68rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 gap-1">
+              {CardData.slice(4, 9).map((card, index) => (
+                <ProfileCard
+                  key={index}
+                  name={card.name}
+                  description={card.description}
+                  imageUrl={card.imageUrl}
+                  func={card.func}
+                  linkedinLink={card.linkedinLink}
+                />
+              ))}
+            </div>
+          )}
+          {!isRestricted && (
+            <div className="grid max-w-[46rem] mx-auto grid-cols-2 gap-1">
+              {CardData.slice(7, 9).map((card, index) => (
+                <ProfileCard
+                  key={index}
+                  name={card.name}
+                  description={card.description}
+                  imageUrl={card.imageUrl}
+                  func={card.func}
+                  linkedinLink={card.linkedinLink}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </section>

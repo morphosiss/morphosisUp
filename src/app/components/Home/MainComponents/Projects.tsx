@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <section className="w-full">
+    <section className="w-full px-5">
       <header className="text-center max-w-xl w-full mx-auto mt-28">
-        <h2 className="font-bold text-4xl">Principais Projectos</h2>
+        <h2 className="font-bold pot:text-4xl text-3xl">Principais Projectos</h2>
         <h5 className="pt-2 font- text-[18px] text-zinc-700">
           Aqui estão alguns dos nossos projectos mais recentes, que demonstram a
           nossa experiência e dedicação em fornecer soluções inovadoras e

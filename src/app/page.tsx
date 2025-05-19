@@ -11,7 +11,7 @@ export default function Home() {
         <Projects />
         <Services />
       </main>
-      <footer className="p-5 relative bg-indigo-500 w-full flex items-center justify-around">
+      <footer className="p-5 relative flex-wrap gap-3 bg-indigo-500 w-full flex items-center justify-around">
         <div className="flex items-center gap-5">
           <Link href={"/"} className="flex items-center gap-1">
             <svg
@@ -42,9 +42,9 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="icon size-6 icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -62,9 +62,9 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="icon size-6 icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -76,7 +76,7 @@ export default function Home() {
               </svg>
             </Link>{" "}
             <Link
-              href={"https://mailto:startupmorphosis@gmail.com"}
+              href={"mailto:startupmorphosis@gmail.com"}
               target="_blank"
               className="text-white"
             >
@@ -85,9 +85,9 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="icon size-6 icon-tabler icons-tabler-outline icon-tabler-mail"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />

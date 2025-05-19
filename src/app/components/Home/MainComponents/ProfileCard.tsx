@@ -34,9 +34,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="icon size-4 text-indigo-500 icon-tabler icons-tabler-outline icon-tabler-circles-relation"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -44,7 +44,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
               <path d="M14.813 17.883a6 6 0 1 0 -4.496 -3.954" />
             </svg>
           </Link>
-          <p className="text-[13.30px] font-medium func  text-indigo-500">{func}</p>
+          <p className="text-[13.30px] font-medium func  text-indigo-500">
+            {func}
+          </p>
         </div>
       </header>
       <div className="mt-3">
