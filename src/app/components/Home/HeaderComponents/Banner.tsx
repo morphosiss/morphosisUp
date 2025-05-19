@@ -35,7 +35,7 @@ const Banner = () => {
           </svg>
           Contacte-nos diretamente pelo LinkedIn
         </Link>
-        <h1 className="det:text-[5rem] ret:text-5xl smaller:text-4xl text-4xl pot:text-7xl font-bold det:font-semibold leading-none">
+        <h1 className="det:text-[5rem] ret:text-5xl smaller:text-4xl text-4xl pot:text-7xl font-medium pot:font-semibold leading-none">
           Transformando <span className="text-indigo-500">tecnologia</span> em{" "}
           <span className="text-indigo-500">soluções ágeis</span> e eficientes!
         </h1>

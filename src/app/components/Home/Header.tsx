@@ -20,7 +20,7 @@ const Header: React.FC<{
       <section id="banner" className="relative pt-32">
         <div className="max-w-3xl w-full mx-auto text-center">
           <header>
-            <h2 className="font-semibold pot:text-5xl ret:text-4xl text-3xl">
+            <h2 className="pot:font-semibold font-medium pot:text-5xl ret:text-4xl text-3xl">
               Quem Somos?
             </h2>
           </header>

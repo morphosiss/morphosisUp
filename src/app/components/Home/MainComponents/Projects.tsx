@@ -4,7 +4,7 @@ const Projects = () => {
   return (
     <section id="projects" className="w-full px-5">
       <header className="text-center max-w-xl w-full mx-auto mt-28">
-        <h2 className="font-semibold pot:text-4xl text-3xl">Principais Projectos</h2>
+        <h2 className="pot:font-semibold font-medium pot:text-4xl text-3xl">Principais Projectos</h2>
         <h5 className="pt-2 font-[450] text-[18px] text-zinc-700">
           Aqui estão alguns dos nossos projectos mais recentes, que demonstram a
           nossa experiência e dedicação em fornecer soluções inovadoras e

@@ -86,7 +86,7 @@ const Services = () => {
       <div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></div>
       <div className="pt-28 relative">
         <header className="text-center px-5 max-w-xl w-full mx-auto ">
-          <h2 className="font-semibold text-3xl pot:text-4xl">Serviços</h2>
+          <h2 className="pot:font-semibold font-medium text-3xl pot:text-4xl">Serviços</h2>
           <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Oferecemos uma ampla gama de serviços para atender às suas
             necessidades tecnológicas.
@@ -125,7 +125,7 @@ const Services = () => {
 
       <section id="team" className="mt-48 px-5">
         <header className="text-center max-w-xl w-full mx-auto ">
-          <h2 className="font-semibold text-4xl">Team</h2>
+          <h2 className="pot:font-semibold font-medium text-4xl">Team</h2>
           <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Nossa equipe é composta por profissionais altamente qualificados e
             experientes, prontos para atender às suas necessidades.
