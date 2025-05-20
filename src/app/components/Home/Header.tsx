@@ -4,7 +4,6 @@ import Navbar from "./HeaderComponents/Navbar";
 import Banner from "./HeaderComponents/Banner";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 const Header: React.FC<{
