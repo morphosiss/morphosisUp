@@ -39,10 +39,13 @@ const Navbar: React.FC<{
 
   return (
     <motion.nav
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
       variants={itemVariantsInfiniteScroll}
       className={`flex transition-all ${
         scrollY && "bg-[rgba(103,105,206,0.08)]  backdrop-blur-2xl"
-      } py-4 fixed top-0 left-0 right-0 items-center z-50 justify-between pot:px-0 px-5 pot:justify-around w-full`}
+      } py-4 fixed top-0 left-0 right-0 items-center z-[70] justify-between pot:px-0 px-5 pot:justify-around w-full`}
     >
       <div>
         <Link href={"/"} className="flex items-center gap-1">
