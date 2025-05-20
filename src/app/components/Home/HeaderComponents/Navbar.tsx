@@ -3,10 +3,20 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import scrollToElement from "./ScrollToElement";
+import { motion } from "framer-motion";
 
 const Navbar: React.FC<{
   setShowMenu: React.Dispatch<React.SetStateAction<string>>;
 }> = ({ setShowMenu }) => {
+  const itemVariantsInfiniteScroll = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 100, delay: 0.3 },
+    },
+  };
+
   const [scrollY, setScrollY] = useState<boolean>(false);
 
   useEffect(() => {
@@ -27,10 +37,9 @@ const Navbar: React.FC<{
     };
   }, []);
 
-  
-
   return (
-    <nav
+    <motion.nav
+      variants={itemVariantsInfiniteScroll}
       className={`flex transition-all ${
         scrollY && "bg-[rgba(103,105,206,0.08)]  backdrop-blur-2xl"
       } py-4 fixed top-0 left-0 right-0 items-center z-50 justify-between pot:px-0 px-5 pot:justify-around w-full`}
@@ -131,7 +140,7 @@ const Navbar: React.FC<{
           </svg>
         </button>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 export default Navbar;
