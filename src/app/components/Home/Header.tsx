@@ -4,6 +4,8 @@ import Navbar from "./HeaderComponents/Navbar";
 import Banner from "./HeaderComponents/Banner";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 const Header: React.FC<{
   setShowMenu: React.Dispatch<React.SetStateAction<string>>;
@@ -53,6 +55,38 @@ const Header: React.FC<{
         className="z-20 relative w-full left-0 right-0 flex items-start mt-14 gap-10"
       >
         <InfiniteScroll cardData={data} />
+      </motion.section>
+
+      <motion.section
+        variants={itemVariantsInfiniteScroll}
+        className="pot:w-[90%] w-[95%] mx-auto gap-2 mt-10 grid ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 p-2 rounded-4xl bg-white border border-zinc-200"
+      >
+        <div className="pot:h-[30rem] h-[25rem] relative overflow-hidden border rounded-3xl border-zinc-200 bg-zinc-100">
+          <div className="bg-[url('/Models/dashboard.webp')] shadow-2xl absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 right-0 rounded-2xl bg-cover pot:bg-top bg-left h-80 w-[95%] pot:w-[90%]"></div>
+        </div>
+        <div className="pot:h-[30rem] h-[25rem] relative overflow-hidden border rounded-3xl border-indigo-300 bg-zinc-800">
+          <div className="bg-[url('/opensource.png')] shadow-2xl absolute -translate-x-1/2 left-1/2 right-0 -bottom-10 rounded-t-2xl bg-cover bg-top h-full w-[95%]"></div>
+        </div>
+        <div className="pot:h-[30rem] h-[25rem] relative overflow-hidden border rounded-3xl border-indigo-300 bg-indigo-600">
+          <div className="bg-transparent flex items-center justify-center  absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 right-0 rounded-2xl bg-cover bg-top h-80 w-[95%]">
+            <Link href={"/"} className="flex flex-wrap justify-center items-center gap-1">
+              <svg
+                className="text-indigo-50 size-12"
+                viewBox="0 0 92 139"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 33V105.5L29.5 135V64.5H64.5V105.5L92 138.5V59.5L37.5 0V33H0Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span className="text-4xl  font-medium text-indigo-50">
+                morphosis Up
+              </span>
+            </Link>
+          </div>
+        </div>
       </motion.section>
       <motion.section id="banner" className="relative pt-32">
         <motion.div
