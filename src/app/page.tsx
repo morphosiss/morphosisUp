@@ -23,7 +23,7 @@ export default function Home() {
           showMenu === "hide" && "hideCard"
         } ${
           showMenu === "on" && "onCard"
-        }  top-0 left-0 right-0 bottom-0 z-[60] bg-[rgba(206,206,206,0.58)] flex flex-col justify-center backdrop-blur-2xl w-full h-dvh`}
+        }  top-0 left-0 right-0 bottom-0 z-[80] bg-[rgba(206,206,206,0.58)] flex flex-col justify-center backdrop-blur-2xl w-full h-dvh`}
       >
         <div className="flex px-5 py-7 h-full relative items-center justify-center gap-5 flex-col">
           <button
