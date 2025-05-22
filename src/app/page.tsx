@@ -15,7 +15,6 @@ export default function Home() {
     else document.body.style.overflow = "auto";
   }, [showMenu]);
 
-  
   return (
     <div id="init" className="relative">
       <aside
@@ -111,9 +110,7 @@ export default function Home() {
                 fill="currentColor"
               />
             </svg>
-            <span className="text-xl font-medium text-white">
-              morphosis Up
-            </span>
+            <span className="text-xl font-medium text-white">morphosis Up</span>
           </Link>
 
           {/* WHATSAPP LINK */}
