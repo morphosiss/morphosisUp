@@ -93,7 +93,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta
           name="google-site-verification"
-          content="BXPRvWtnlUj6Co1cIimChpcNrtC30OsWi7-ccoBfEhE"
+          content="4Htd1MfJ_ulzF2fXYiRlp3Xml1GNbHLGGyZ9oacnye8"
         />
       </Head>
       <body className={` ${poppins.variable} ${inter.variable} antialiased`}>
